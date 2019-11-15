@@ -6,7 +6,7 @@ const Menu= () => {
     const ele = document.getElementById(id);
     if (ele) {
       console.log("found ele", ele);
-      ele.scrollIntoView();
+      ele.scrollIntoView({behavior: "smooth"});
     }
   }
 
