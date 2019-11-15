@@ -1,13 +1,5 @@
 import React from "react";
 const Scroll = () => {
-  const generatedItems = n => {
-    let items = [];
-    for (let i = 0; i < n; i++) {
-      items.push(<div id={`${i}Testing`}>Testing{i}</div>);
-    }
-    return items;
-  };
-
   function handleScroll({ id = 40 }) {
     console.log("scrolling to 40");
     const ele = document.getElementById(`${id}Testing`);
@@ -18,9 +10,8 @@ const Scroll = () => {
   }
 
   return (
-    <div style={{ height: 300, overflow: "hidden" }}>
+    <div style={{ height: 300, overflow: "auto", }}>
       <button onClick={handleScroll}>Scroll to 40</button>
-      {generatedItems(500)}
     </div>
   );
 };
